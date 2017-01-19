@@ -35,7 +35,6 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      }
-    }
+      }    }
   });
 })(this);
