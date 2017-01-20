@@ -1,5 +1,7 @@
 import {Component, ViewChild } from '@angular/core';
 import {Hero} from '../domain/hero';
+import {AlertComponent } from 'ng2-bootstrap/ng2-bootstrap';
+
 
 @Component({
   moduleId: module.id,

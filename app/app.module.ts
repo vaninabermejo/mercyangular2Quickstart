@@ -5,7 +5,8 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule}  from '@angular/http';
 
 
-import { AccordionModule } from 'ng2-bootstrap/accordion';
+import { DatepickerModule, AlertModule,AccordionModule,ButtonsModule   } from 'ng2-bootstrap';
+
 
 import {AppRoutingModule} from './app-routing.module';
 
@@ -33,7 +34,10 @@ import {HeroService} from './services/hero.service';
                   HttpModule,
                   InMemoryWebApiModule.forRoot(InMemoryDataService),
                   AppRoutingModule,
-                  AccordionModule.forRoot()
+                  AlertModule.forRoot(),
+    DatepickerModule.forRoot(),
+    AccordionModule.forRoot(),
+    ButtonsModule.forRoot()
 
                   ],
   declarations: [ AppComponent,

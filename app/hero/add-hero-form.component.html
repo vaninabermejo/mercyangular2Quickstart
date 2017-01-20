@@ -1,5 +1,3 @@
-
-
 <div [hidden]="submitted">
 
  {{diagnostic}}
@@ -10,9 +8,10 @@
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"  #spy #name="ngModel" />
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-        Name is required. please full fit it
-      </div>
+        <alert [hidden]="name.valid || name.pristine" type="danger">
+          <strong>Name is required.</strong>  please full fit it
+        </alert>
+
     </div>
     <br>TODO: remove this: {{spy.className}} {{name.valid}}
     <div class="form-group">
@@ -26,11 +25,14 @@
       </select>
     </div>
 
-    <button type="submit" class="btn btn-default" [disabled]="!addHeroForm.form.valid">Submit</button>
+    <button type="button" class="btn btn-primary" [disabled]="!addHeroForm.form.valid"  (click)="onSubmit()">Submit</button>
   </form>
 </div>
 </div>
 <div [hidden]="!submitted">
+  <alert type="success">
+    <strong>Well done!</strong> You successfully read this important alert message.
+  </alert>
   <h2>You submitted the following:</h2>
   <div class="row">
     <div class="col-xs-3">Name</div>
